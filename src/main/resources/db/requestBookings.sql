@@ -1,0 +1,16 @@
+-- CREAZIONE TABELLA: REQUEST_BOOKINGS
+CREATE TABLE IF NOT EXISTS REQUEST_BOOKINGS (
+    id_booking INT AUTO_INCREMENT,
+    id_room_category INT NOT NULL,
+    id_customer INT NOT NULL,
+    id_receptionist INT NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    total_price DOUBLE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_room_category) REFERENCES ROOM_CATEGORIES(id_room_category),
+    FOREIGN KEY (id_customer) REFERENCES CUSTOMERS(id_customer),
+    PRIMARY KEY(id_booking)
+);

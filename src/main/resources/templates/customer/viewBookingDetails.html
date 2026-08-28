@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Impostazione del Titolo della Pagina -->
+  <title>View Booking Details - HotelSys</title>
+
+  <!-- Impostazione del Favicon della Pagina -->
+  <link rel="icon" href="../../asset/favicon.ico" type="image/x-icon">
+
+  <!-- Inclusione del framework Tailwind CSS da un CDN (Content Delivery Network) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Inclusione di file JavaScript -->
+  <script src="../app/main.js" defer></script>
+  <script src="../app/customer/viewBookingDetails.js" defer></script>
+</head>
+
+<!-- BODY -->
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <div id="header">
+    <!-- contenuto caricato dinamicamente da main.js -->
+  </div> 
+
+  <!-- Main Content -->
+  <main class="flex-grow pt-24">
+     <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <h1 class="text-4xl font-extrabold text-gray-800 mb-4">Explore Our Rooms</h1>
+      <p class="text-lg text-gray-600 mb-10">
+        Choose from our variety of rooms and suites. Fill in your details to request a booking.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-xl transition-shadow">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4" data-room-type="Single Room">Single Room</h2>
+          <ul class="text-gray-600 space-y-2 mb-4">
+            <li><strong>Capacity:</strong> 1 Person</li>
+            <li><strong>Price per night:</strong> $50</li>
+            <li><strong>Accessories:</strong> Wi-Fi, TV, Air Conditioning</li>
+          </ul>
+          <form class="flex flex-col space-y-4">
+            <div>
+              <label for="single-room-start" class="text-gray-700 font-medium">Start Date</label>
+              <input type="date" id="single-room-start" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <div>
+              <label for="single-room-end" class="text-gray-700 font-medium">End Date</label>
+              <input type="date" id="single-room-end" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <!-- Verrà Aggiornato il Numero di Stanze Disponbili per il determinato Tipo di Stanza e un Intervallo di Date -->
+            <div class="flex items-center bg-green-100 p-4 rounded-lg">
+              <p class="text-lg font-bold text-green-800 single-rooms-available" id="single-rooms-available"> 
+                <!-- contenuto caricato dinamicamente da customer/viewBookingDetails.js -->
+                Select dates to see availability. 
+              </p>
+            </div>
+            <button type="submit" class="mt-10 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
+              Request Booking
+            </button>
+          </form>
+        </div>    
+
+        <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-xl transition-shadow">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4" data-room-type="Double Room">Double Room</h2>
+          <ul class="text-gray-600 space-y-2 mb-4">
+            <li><strong>Capacity:</strong> 2 Person</li>
+            <li><strong>Price per night:</strong> $100</li>
+            <li><strong>Accessories:</strong> Wi-Fi, TV, Air Conditioning</li>
+          </ul>
+          <form class="flex flex-col space-y-4">
+            <div>
+              <label for="double-room-start" class="text-gray-700 font-medium">Start Date</label>
+              <input type="date" id="double-room-start" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <div>
+              <label for="double-room-end" class="text-gray-700 font-medium">End Date</label>
+              <input type="date" id="double-room-end" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <!-- Verrà Aggiornato il Numero di Stanze Disponbili per il determinato Tipo di Stanza e un Intervallo di Date -->
+            <div class="flex items-center bg-green-100 p-4 rounded-lg">
+              <p class="text-lg font-bold text-green-800 single-rooms-available" id="double-rooms-available"> 
+                <!-- contenuto caricato dinamicamente da customer/viewBookingDetails.js -->
+                Select dates to see availability.
+              </p>
+            </div>
+            <button type="submit" class="mt-10 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
+              Request Booking
+            </button>
+          </form>
+        </div>   
+
+        <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-xl transition-shadow">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4" data-room-type="Triple Room">Triple Room</h2>
+          <ul class="text-gray-600 space-y-2 mb-4">
+            <li><strong>Capacity:</strong> 3 Person</li>
+            <li><strong>Price per night:</strong> $150</li>
+            <li><strong>Accessories:</strong> Wi-Fi, TV, Air Conditioning</li>
+          </ul>
+          <form class="flex flex-col space-y-4">
+            <div>
+              <label for="triple-room-start" class="text-gray-700 font-medium">Start Date</label>
+              <input type="date" id="triple-room-start" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <div>
+              <label for="triple-room-end" class="text-gray-700 font-medium">End Date</label>
+              <input type="date" id="triple-room-end" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <!-- Verrà Aggiornato il Numero di Stanze Disponbili per il determinato Tipo di Stanza e un Intervallo di Date -->
+            <div class="flex items-center bg-green-100 p-4 rounded-lg">
+              <p class="text-lg font-bold text-green-800 single-rooms-available" id="triple-rooms-available"> 
+                <!-- contenuto caricato dinamicamente da customer/viewBookingDetails.js -->
+                Select dates to see availability.
+              </p>
+            </div>
+            <button type="submit" class="mt-10 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
+              Request Booking
+            </button>
+          </form>
+        </div>   
+
+        <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-xl transition-shadow">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4" data-room-type="Quadruple Room">Quadruple Room</h2>
+          <ul class="text-gray-600 space-y-2 mb-4">
+            <li><strong>Capacity:</strong> 4 Person</li>
+            <li><strong>Price per night:</strong> $200</li>
+            <li><strong>Accessories:</strong> Wi-Fi, TV, Air Conditioning</li>
+          </ul>
+          <form class="flex flex-col space-y-4">
+            <div>
+              <label for="quadruple-room-start" class="text-gray-700 font-medium">Start Date</label>
+              <input type="date" id="quadruple-room-start" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <div>
+              <label for="quadruple-room-end" class="text-gray-700 font-medium">End Date</label>
+              <input type="date" id="quadruple-room-end" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <!-- Verrà Aggiornato il Numero di Stanze Disponbili per il determinato Tipo di Stanza e un Intervallo di Date -->
+            <div class="flex items-center bg-green-100 p-4 rounded-lg">
+              <p class="text-lg font-bold text-green-800 single-rooms-available" id="quadruple-rooms-available"> 
+                <!-- contenuto caricato dinamicamente da customer/viewBookingDetails.js -->
+                Select dates to see availability.
+              </p>
+            </div>
+            <button type="submit" class="mt-10 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
+              Request Booking
+            </button>
+          </form>
+        </div>   
+
+        <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-xl transition-shadow">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4" data-room-type="Single Suite">Single Suite</h2>
+          <ul class="text-gray-600 space-y-2 mb-4">
+            <li><strong>Capacity:</strong> 1 Person</li>
+            <li><strong>Price per night:</strong> $100</li>
+            <li><strong>Accessories:</strong> Wi-Fi, TV, Air Conditioning, Minibar, Jacuzzi</li>
+          </ul>
+          <form class="flex flex-col space-y-4">
+            <div>
+              <label for="single-suite-start" class="text-gray-700 font-medium">Start Date</label>
+              <input type="date" id="single-suite-start" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <div>
+              <label for="single-suite-end" class="text-gray-700 font-medium">End Date</label>
+              <input type="date" id="single-suite-end" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div> 
+            <!-- Verrà Aggiornato il Numero di Stanze Disponbili per il determinato Tipo di Stanza e un Intervallo di Date -->
+            <div class="flex items-center bg-green-100 p-4 rounded-lg">
+              <p class="text-lg font-bold text-green-800 single-suite-available" id="single-suites-available"> 
+                <!-- contenuto caricato dinamicamente da customer/viewBookingDetails.js -->
+                Select dates to see availability.
+              </p>
+            </div>
+            <button type="submit" class="mt-10 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
+              Request Booking
+            </button>
+          </form>
+        </div>   
+
+        <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-xl transition-shadow">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4" data-room-type="Double Suite">Double Suite</h2>
+          <ul class="text-gray-600 space-y-2 mb-4">
+            <li><strong>Capacity:</strong> 2 Person</li>
+            <li><strong>Price per night:</strong> $150</li>
+            <li><strong>Accessories:</strong> Wi-Fi, TV, Air Conditioning, Minibar, Jacuzzi</li>
+          </ul>
+          <form class="flex flex-col space-y-4">
+            <div>
+              <label for="double-suite-start" class="text-gray-700 font-medium">Start Date</label>
+              <input type="date" id="double-suite-start" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <div>
+              <label for="double-suite-end" class="text-gray-700 font-medium">End Date</label>
+              <input type="date" id="double-suite-end" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <!-- Verrà Aggiornato il Numero di Stanze Disponbili per il determinato Tipo di Stanza e un Intervallo di Date -->
+            <div class="flex items-center bg-green-100 p-4 rounded-lg">
+              <p class="text-lg font-bold text-green-800 single-suite-available" id="double-suites-available"> 
+                <!-- contenuto caricato dinamicamente da customer/viewBookingDetails.js -->
+                Select dates to see availability.
+              </p>
+            </div>
+            <button type="submit" class="mt-10 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
+              Request Booking
+            </button>
+          </form>
+        </div>   
+
+        <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-xl transition-shadow">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4" data-room-type="Triple Suite">Triple Suite</h2>
+          <ul class="text-gray-600 space-y-2 mb-4">
+            <li><strong>Capacity:</strong> 3 Person</li>
+            <li><strong>Price per night:</strong> $200</li>
+            <li><strong>Accessories:</strong> Wi-Fi, TV, Air Conditioning, Minibar, Jacuzzi</li>
+          </ul>
+          <form class="flex flex-col space-y-4">
+            <div>
+              <label for="triple-suite-start" class="text-gray-700 font-medium">Start Date</label>
+              <input type="date" id="triple-suite-start" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <div>
+              <label for="triple-suite-end" class="text-gray-700 font-medium">End Date</label>
+              <input type="date" id="triple-suite-end" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <!-- Verrà Aggiornato il Numero di Stanze Disponbili per il determinato Tipo di Stanza e un Intervallo di Date -->
+            <div class="flex items-center bg-green-100 p-4 rounded-lg">
+              <p class="text-lg font-bold text-green-800 single-suite-available" id="double-suites-available"> 
+                <!-- contenuto caricato dinamicamente da customer/viewBookingDetails.js -->
+                Select dates to see availability.
+              </p>
+            </div>
+            <button type="submit" class="mt-10 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
+              Request Booking
+            </button>
+          </form>
+        </div>   
+
+        <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-xl transition-shadow">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4" data-room-type="Quadruple Suite">Quadruple Suite</h2>
+          <ul class="text-gray-600 space-y-2 mb-4">
+            <li><strong>Capacity:</strong> 4 Person</li>
+            <li><strong>Price per night:</strong> $250</li>
+            <li><strong>Accessories:</strong> Wi-Fi, TV, Air Conditioning, Minibar, Jacuzzi</li>
+          </ul>
+          <form class="flex flex-col space-y-4">
+            <div>
+              <label for="quadruple-suite-start" class="text-gray-700 font-medium">Start Date</label>
+              <input type="date" id="quadruple-suite-start" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <div>
+              <label for="quadruple-suite-end" class="text-gray-700 font-medium">End Date</label>
+              <input type="date" id="quadruple-suite-end" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500 date-input">
+            </div>
+            <!-- Verrà Aggiornato il Numero di Stanze Disponbili per il determinato Tipo di Stanza e un Intervallo di Date -->
+            <div class="flex items-center bg-green-100 p-4 rounded-lg">
+              <p class="text-lg font-bold text-green-800 single-suite-available" id="quadruple-suites-available"> 
+                <!-- contenuto caricato dinamicamente da customer/viewBookingDetails.js -->
+                Select dates to see availability.
+              </p>
+            </div>
+            <button type="submit" class="mt-10 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
+              Request Booking
+            </button>
+          </form>
+        </div>   
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer">
+    <!-- contenuto caricato dinamicamente da main.js -->
+  </div> 
+</body>
+</html>

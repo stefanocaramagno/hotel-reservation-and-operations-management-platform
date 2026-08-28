@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Impostazione del Titolo della Pagina -->
+  <title>Accepted Bookings - HotelSys</title>
+
+  <!-- Impostazione del Favicon della Pagina -->
+  <link rel="icon" href="../../asset/favicon.ico" type="image/x-icon">
+
+  <!-- Inclusione del framework Tailwind CSS da un CDN (Content Delivery Network) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Inclusione di file JavaScript -->
+  <script src="../app/main.js" defer></script>
+  <script src="../app/customer/acceptedBookings.js" defer></script>
+</head>
+
+<!-- BODY -->
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <div id="header">
+    <!-- contenuto caricato dinamicamente da main.js -->
+  </div> 
+
+  <!-- Main Content -->
+  <main class="flex-grow pt-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <h1 class="text-4xl font-extrabold text-gray-800 mb-6">Accepted Bookings</h1>
+      <p class="text-lg text-gray-600 mb-10">
+        Below are the details of all the bookings that have been accepted, including room features and dates.
+      </p>
+
+      <!-- Verrà Visualizzata la Lista delle Prenotazioni confermate da un Pagamento Precedente -->
+      <div id="accepted-bookings" class="space-y-6">
+        <!-- Contenuto caricato dinamicamente da customer/acceptedBookings.js -->
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer">
+    <!-- contenuto caricato dinamicamente da main.js -->
+  </div> 
+</body>
+</html>

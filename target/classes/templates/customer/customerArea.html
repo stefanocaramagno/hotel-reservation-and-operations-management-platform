@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Impostazione del Titolo della Pagina -->
+  <title>Customer Area - HotelSys</title>
+
+  <!-- Impostazione del Favicon della Pagina -->
+  <link rel="icon" href="../../asset/favicon.ico" type="image/x-icon">
+
+  <!-- Inclusione del framework Tailwind CSS da un CDN (Content Delivery Network) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Inclusione di file JavaScript -->
+  <script src="../app/main.js" defer></script>
+</head>
+
+<!-- BODY -->
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <div id="header">
+    <!-- contenuto caricato dinamicamente da main.js -->
+  </div> 
+
+  <!-- Main Content -->
+  <main class="flex-grow pt-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <h1 class="text-4xl font-extrabold text-gray-800 mb-4">Welcome <span th:text="${fullName}" class="text-blue-600"></span> to Your Customer Area</h1>
+      <p class="text-lg text-gray-600 mb-10">
+        Manage your bookings, explore available rooms, and update your profile.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col hover:shadow-xl transition-shadow">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 10h11M9 21V3m0 0L5 7m4-4l4 4"/>
+            </svg>
+            <h2 class="text-2xl font-bold text-gray-800">View Booking Details</h2>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Access detailed information about your current and past bookings.
+          </p> 
+          <a th:href="@{/customer/viewBookingDetails}" class="mt-auto inline-block text-blue-600 font-medium hover:text-blue-700 transition-colors">
+            View Bookings →
+          </a>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col hover:shadow-xl transition-shadow">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zM12 14c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z"/>
+            </svg>
+            <h2 class="text-2xl font-bold text-gray-800">Request Booking Modification</h2>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Submit a request to modify the details of your bookings.
+          </p>
+          <a th:href="@{/customer/requestBookingModification}" class="mt-auto inline-block text-blue-600 font-medium hover:text-blue-700 transition-colors">
+            Modify Booking →
+          </a>
+        </div> 
+
+        <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col hover:shadow-xl transition-shadow">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M20 12H4m16 0a8 8 0 11-16 0 8 8 0 0116 0z"/>
+            </svg>
+            <h2 class="text-2xl font-bold text-gray-800">Make Payment</h2>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Complete your payments using your preferred method.
+          </p> 
+          <a th:href="@{/customer/makePayment}" class="mt-auto inline-block text-blue-600 font-medium hover:text-blue-700 transition-colors">
+            Make Payment →
+          </a>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col hover:shadow-xl transition-shadow">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 11c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2zm0 0v7m5-7h-1.5a2.5 2.5 0 100-5H7a2.5 2.5 0 000 5H5"/>
+            </svg>
+            <h2 class="text-2xl font-bold text-gray-800">Accepted Bookings</h2>
+          </div>
+          <p class="text-gray-600 mb-4">
+            View all your accepted bookings and their details.
+          </p>
+          <a th:href="@{/customer/acceptedBookings}" class="mt-auto inline-block text-blue-600 font-medium hover:text-blue-700 transition-colors">
+            View Accepted Bookings →
+          </a>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col hover:shadow-xl transition-shadow">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l-2-2m0 0l2-2m-2 2h6m8 4a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <h2 class="text-2xl font-bold text-gray-800">Digital Check-In</h2>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Check into your room online for a seamless arrival experience.
+          </p>
+          <a th:href="@{/customer/digitalCheckIn}" class="mt-auto inline-block text-blue-600 font-medium hover:text-blue-700 transition-colors">
+            Check-In →
+          </a>
+        </div>
+    
+        <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col hover:shadow-xl transition-shadow">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M16 17l-4 4m0 0l-4-4m4 4V3"/>
+            </svg>
+            <h2 class="text-2xl font-bold text-gray-800">Digital Check-Out</h2>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Complete your check-out online for a smooth departure process.
+          </p>
+          <a th:href="@{/customer/digitalCheckOut}" class="mt-auto inline-block text-blue-600 font-medium hover:text-blue-700 transition-colors">
+            Check-Out →
+          </a>
+        </div>
+       
+        <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col hover:shadow-xl transition-shadow">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+            <h2 class="text-2xl font-bold text-gray-800">Cancel Booking</h2>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Cancel an upcoming booking with our simple cancellation process.
+          </p>
+          <a  th:href="@{/customer/cancelBooking}" class="mt-auto inline-block text-blue-600 font-medium hover:text-blue-700 transition-colors">
+            Cancel Booking →
+          </a>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col hover:shadow-xl transition-shadow">
+          <div class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-red-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 16l4-4m0 0l-4-4m4 4H7m6-4v8"/>
+            </svg>
+            <h2 class="text-2xl font-bold text-gray-800">Logout</h2>
+          </div>
+          <p class="text-gray-600 mb-4">
+            End your session and securely log out from your account.
+          </p>
+          <form action="/logout" method="POST" class="mt-auto">
+            <button type="submit" class="w-full bg-red-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-red-600 transition-colors">
+              Logout
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer">
+    <!-- contenuto caricato dinamicamente da main.js -->
+  </div> 
+</body>
+</html>

@@ -1,0 +1,38 @@
+<header class="fixed top-0 w-full bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a th:href="@{/home}" class="text-2xl font-extrabold text-gray-800 hover:text-blue-600 transition-all">
+          Hotel<span class="text-blue-500">Sys</span>
+        </a>
+      </div>
+      
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8 font-medium">
+        <a th:href="#home" class="text-gray-700 hover:text-blue-500 transition-all">Home</a>
+        <a th:href="#services" class="text-gray-700 hover:text-blue-500 transition-all">Services</a>
+        <a th:href="#about" class="text-gray-700 hover:text-blue-500 transition-all">About</a>
+        <a th:href="#contact" class="text-gray-700 hover:text-blue-500 transition-all">Contact</a>
+      </nav>
+     
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden focus:outline-none text-gray-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" 
+             fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" 
+                stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden bg-white shadow-md md:hidden">
+    <a th:href="#home" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
+    <a th:href="#services" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Services</a>
+    <a th:href="#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
+    <a th:href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
+  </div>
+</header>
